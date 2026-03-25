@@ -1,0 +1,43 @@
+<!-- ...head unchanged... -->
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<!-- ... -->
+<body>
+  <header class="nav">
+    <!-- ... -->
+      <button class="btn btn-primary" onclick="scrollToContact()">Contact Me</button>
+    <!-- ... -->
+  </header>
+
+  <!-- Hero headshot with srcset for sharpness -->
+  <!-- ...inside hero__right... -->
+  <div class="avatar-frame">
+    <img
+      src="assets/headshot.jpg"
+      srcset="assets/headshot@2x.jpg 2x"
+      alt="Ashu Purani headshot"
+      loading="eager"
+      decoding="async"
+    />
+  </div>
+  <!-- ... -->
+
+  <section id="contact" class="section contact">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2>Let’s build resilient data & EDI systems together.</h2>
+      <p>Email: <a href="mailto:ashutoshbpurani99@gmail.com">ashutoshbpurani99@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/ashu-purani" target="_blank" rel="noreferrer">linkedin.com/in/ashu-purani</a></p>
+    </div>
+    <form action="https://formspree.io/f/YOUR_NEW_ID" method="POST" class="card form">
+      <input type="hidden" name="_subject" value="New inquiry from portfolio site">
+      <input type="hidden" name="_replyto" value="ashutoshbpurani99@gmail.com">
+      <label>Name<input type="text" name="name" required></label>
+      <label>Email<input type="email" name="_replyto" required></label>
+      <label>Message<textarea name="message" rows="4" required></textarea></label>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+      <p class="small">Submits securely to ashutoshbpurani99@gmail.com via Formspree.</p>
+    </form>
+  </section>
+  <!-- ... -->
+</body>
