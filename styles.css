@@ -1,0 +1,122 @@
+:root {
+  --bg: #f7f9fb;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #4b5563;
+  --primary: #2563eb;
+  --primary-soft: #e0e7ff;
+  --border: #e5e7eb;
+  --shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.nav {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 2rem; background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(12px); border-bottom: 1px solid var(--border);
+}
+.nav nav { display: flex; align-items: center; gap: 1rem; }
+.nav a { text-decoration: none; color: var(--muted); font-weight: 500; }
+.brand { font-weight: 700; }
+
+main { padding: 2rem clamp(1rem, 3vw, 3rem) 3rem; }
+
+.section { margin: 4rem auto; max-width: 1200px; }
+.hero { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: center; }
+.hero__text h1 { font-size: clamp(1.8rem, 4vw, 2.7rem); margin: 0.3rem 0 1rem; }
+.lede { max-width: 680px; font-size: 1.05rem; color: var(--muted); }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.78rem; color: var(--muted); font-weight: 600; }
+.meta { display: flex; gap: 1.2rem; flex-wrap: wrap; color: var(--muted); }
+.cta-group { display: flex; gap: 0.8rem; margin: 1.2rem 0; flex-wrap: wrap; }
+
+.hero__visual .card { max-width: 360px; margin: 0 auto; }
+
+.section h2 { margin: 0.2rem 0 1rem; font-size: 1.7rem; }
+.section p { color: var(--muted); }
+
+.two-col { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); align-items: start; }
+
+.grid { display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.2rem 1.4rem;
+  box-shadow: var(--shadow);
+}
+
+.card.stats h3 { margin: 0; font-size: 1.6rem; }
+.card.stats p { margin-top: 0.3rem; }
+
+.card__body { margin-top: 0.6rem; }
+.headshot { width: 100%; border-radius: 14px; object-fit: cover; }
+.name { font-weight: 700; margin: 0.4rem 0 0; }
+.role { margin: 0.1rem 0; color: var(--muted); }
+.tagline { color: var(--muted); }
+
+.chips, .chip-list { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.6rem; }
+.chip {
+  background: var(--primary-soft);
+  color: #1e3a8a;
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: var(--primary); color: #fff; box-shadow: 0 10px 30px rgba(37,99,235,0.3); }
+.btn-secondary { background: #eef2ff; color: #1e3a8a; }
+
+.timeline { display: grid; gap: 1rem; }
+.timeline .card ul { padding-left: 1.1rem; margin: 0.6rem 0 0.4rem; color: var(--muted); }
+
+.projects .project .pill,
+.services .pill {
+  display: inline-block;
+  background: #ecfeff;
+  color: #0f172a;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.education .card h3 { margin: 0 0 0.2rem; }
+
+.contact { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); align-items: start; }
+.form label { display: block; font-weight: 600; color: var(--text); margin-bottom: 0.6rem; }
+.form input, .form textarea {
+  width: 100%; padding: 0.7rem 0.8rem; margin-top: 0.3rem;
+  border: 1px solid var(--border); border-radius: 10px; font: inherit; background: #f8fafc;
+}
+.form button { width: 100%; margin-top: 0.5rem; }
+.small { color: var(--muted); font-size: 0.9rem; }
+
+.footer {
+  text-align: center; padding: 1.5rem; color: var(--muted);
+  border-top: 1px solid var(--border); background: rgba(255,255,255,0.6);
+}
+
+@media (max-width: 720px) {
+  .nav { flex-wrap: wrap; gap: 0.6rem; }
+  .nav nav { width: 100%; justify-content: space-between; flex-wrap: wrap; }
+}
