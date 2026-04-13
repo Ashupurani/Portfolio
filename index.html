@@ -3,57 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ashu Purani | EDI & Data Analytics Portfolio</title>
+  <title>Ashu Purani | EDI &amp; Data Analytics Portfolio</title>
+  <meta name="description" content="Ashu Purani — EDI Analyst, Data Engineer, and Supply Chain Specialist based in Mississauga, Ontario." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/favicon.png">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="nav">
-    <div class="brand">Ashu Purani</div>
-    <nav>
+  <div id="scroll-progress" class="scroll-progress"></div>
+
+  <header class="nav" id="navbar">
+    <a href="#" class="brand">Ashu Purani</a>
+    <nav id="nav-menu">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
-      <a class="btn btn-ghost" href="assets/resume.pdf" download>Résumé</a>
-      <button class="btn btn-primary" onclick="scrollToContact()">Contact Me</button>
+      <a class="btn btn-ghost" href="assets/resume.pdf" download>R&eacute;sum&eacute;</a>
+      <button class="btn btn-primary" onclick="scrollToContact()">Hire Me</button>
     </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
   <main>
+
+    <!-- HERO -->
     <section class="hero">
-      <div class="hero__bg"></div>
+      <div class="hero__orbs" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
       <div class="hero__content">
-        <div class="hero__left">
-          <p class="eyebrow">EDI Analyst · Data & Analytics · Supply Chain</p>
-          <h1>Data-driven, approachable, and focused on seamless system integrations.</h1>
+        <div class="hero__left reveal">
+          <p class="eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            Available for new opportunities
+          </p>
+          <h1>Data-driven insights.<br><span class="gradient-text">Seamless integrations.</span></h1>
           <p class="lede">I simplify B2B communication with smart EDI strategies and build data products that deliver measurable operational impact.</p>
-          <div class="cta-group">
-            <a class="btn btn-primary" href="#projects">View Projects</a>
-            <a class="btn btn-secondary" href="assets/resume.pdf" download>Download Résumé</a>
+          <div class="role-chips">
+            <span id="typing-text" class="typing-chip" aria-live="polite"></span>
           </div>
-          <div class="meta">
-            <span>Based in Mississauga, Ontario</span>
-            <span>Open to: EDI consulting, Data Analytics/Engineering</span>
+          <div class="cta-group">
+            <a class="btn btn-primary" href="#projects">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              View Projects
+            </a>
+            <a class="btn btn-secondary" href="assets/resume.pdf" download>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download R&eacute;sum&eacute;
+            </a>
+          </div>
+          <div class="meta-row">
+            <span class="meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Mississauga, Ontario
+            </span>
+            <span class="meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+              Open to EDI &amp; Data roles
+            </span>
           </div>
         </div>
-        <div class="hero__right">
+        <div class="hero__right reveal reveal--right">
           <div class="profile-card">
-            <div class="avatar-frame">
-              <img src="assets/headshot.jpg" alt="Ashu Purani headshot" loading="lazy" />
+            <div class="avatar-ring">
+              <div class="avatar-frame">
+                <img src="assets/headshot.jpg" alt="Ashu Purani headshot" loading="lazy" />
+              </div>
             </div>
-            <div>
+            <div class="profile-info">
               <p class="name">Ashu Purani</p>
-              <p class="role">Electronic Data Interchange Analyst @ Maple Lodge Farms</p>
-              <p class="tagline">Bridging business systems and data pipelines.</p>
+              <p class="role-title">EDI Analyst @ Maple Lodge Farms</p>
+              <p class="tagline">Bridging business systems &amp; data pipelines.</p>
               <div class="chips">
                 <span class="chip">EDI</span><span class="chip">SAP MM</span><span class="chip">Power BI</span>
                 <span class="chip">Python</span><span class="chip">Data Engineering</span>
+              </div>
+              <div class="social-links">
+                <a href="https://www.linkedin.com/in/ashu-purani" target="_blank" rel="noreferrer" class="social-btn" aria-label="LinkedIn profile">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="mailto:ashutoshbpurani99@gmail.com" class="social-btn" aria-label="Send email">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </a>
+                <a href="assets/resume.pdf" download class="social-btn" aria-label="Download resume">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                </a>
               </div>
             </div>
           </div>
@@ -61,175 +104,437 @@
       </div>
     </section>
 
-    <!-- (remaining sections unchanged) -->
-    <section id="about" class="section two-col">
-      <div>
-        <p class="eyebrow">About</p>
-        <h2>Friendly, results-focused partner for retail, supply chain, and IT teams.</h2>
-        <p>I design and operate EDI workflows, data pipelines, and analytics that keep trading partners in sync and leadership informed. Background in SAP MM, APM analytics, and IoT/ML foundations—helping organizations cut downtime, improve OEE, and ship on time.</p>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="section-header reveal">
+        <p class="eyebrow">About Me</p>
+        <h2>Friendly, results-focused partner for retail, supply chain &amp; IT teams.</h2>
       </div>
-      <div class="card stats">
-        <div><h3>25%+</h3><p>Downtime reduction via APM/analytics</p></div>
-        <div><h3>30%+</h3><p>Maintenance cost reduction through CI</p></div>
-        <div><h3>Predictive</h3><p>Data pipelines & dashboards for IPL, sales, EDI</p></div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I design and operate EDI workflows, data pipelines, and analytics that keep trading partners in sync and leadership informed. Background in SAP MM, APM analytics, and IoT/ML foundations &mdash; helping organizations cut downtime, improve OEE, and ship on time.</p>
+          <p>With experience across manufacturing, retail, and technology sectors, I bridge the gap between complex technical systems and meaningful business outcomes.</p>
+        </div>
+        <div class="stats-grid reveal reveal--right">
+          <div class="stat-card">
+            <div class="stat-row"><span class="stat-number" data-target="25">0</span><span class="stat-suffix">%+</span></div>
+            <p>Downtime reduction via APM/analytics</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-row"><span class="stat-number" data-target="30">0</span><span class="stat-suffix">%+</span></div>
+            <p>Maintenance cost reduction via CI</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-row"><span class="stat-number" data-target="15">0</span><span class="stat-suffix">%+</span></div>
+            <p>OEE improvement achieved</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-row"><span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span></div>
+            <p>Years of industry experience</p>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- SERVICES -->
     <section id="services" class="section">
-      <p class="eyebrow">Services</p>
-      <h2>How I can help</h2>
-      <div class="grid services">
-        <div class="card">
+      <div class="section-header reveal">
+        <p class="eyebrow">Services</p>
+        <h2>How I can help your business</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
           <h3>EDI Consulting</h3>
-          <p>Design, map, and optimize EDI (850/855/856/810/997), onboard partners, monitor flows with actionable alerts.</p>
+          <p>Design, map, and optimize EDI (850/855/856/810/997), onboard partners, and monitor flows with actionable alerts.</p>
           <ul>
-            <li>SIT leadership for new partners</li>
-            <li>Exception handling & RCA</li>
-            <li>Compliance & documentation</li>
+            <li>SIT leadership for new trading partners</li>
+            <li>Exception handling &amp; root cause analysis</li>
+            <li>Compliance documentation &amp; auditing</li>
           </ul>
         </div>
-        <div class="card">
-          <h3>Data Analytics & Engineering</h3>
+        <div class="service-card reveal" style="--delay: 0.1s">
+          <div class="service-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/></svg>
+          </div>
+          <h3>Data Analytics &amp; Engineering</h3>
           <p>End-to-end pipelines and dashboards that turn messy data into decision-ready insights.</p>
           <ul>
-            <li>PySpark / Databricks pipelines</li>
+            <li>PySpark / Databricks data pipelines</li>
             <li>Power BI executive dashboards</li>
-            <li>ETL/ELT with SQL & Python</li>
+            <li>ETL/ELT with SQL &amp; Python</li>
+          </ul>
+        </div>
+        <div class="service-card reveal" style="--delay: 0.2s">
+          <div class="service-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>Supply Chain Integration</h3>
+          <p>Connecting ERP systems, trading partners, and analytics to create resilient supply chain operations.</p>
+          <ul>
+            <li>SAP MM process design &amp; optimization</li>
+            <li>Vendor onboarding &amp; compliance</li>
+            <li>Inventory &amp; procurement analytics</li>
           </ul>
         </div>
       </div>
     </section>
 
+    <!-- EXPERIENCE -->
     <section id="experience" class="section">
-      <p class="eyebrow">Experience</p>
-      <h2>Career timeline</h2>
+      <div class="section-header reveal">
+        <p class="eyebrow">Experience</p>
+        <h2>Career timeline</h2>
+      </div>
       <div class="timeline">
-        <article class="card">
-          <h3>Electronic Data Interchange Analyst — Maple Lodge Farms</h3>
-          <p class="meta">Jun 2025 – Present · Brampton, ON</p>
-          <ul>
-            <li>Lead SIT for new partners; ensured timely & accurate 850/855/856/810/997 flows.</li>
-            <li>Monitored EDI via MS Dynamics AX & middleware; drove automation and alerts.</li>
-            <li>Optimized partner compliance and documentation.</li>
-          </ul>
+        <div class="timeline-track" aria-hidden="true"></div>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="card timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Electronic Data Interchange Analyst</h3>
+                <p class="company">Maple Lodge Farms</p>
+              </div>
+              <span class="timeline-date">Jun 2025 &ndash; Present</span>
+            </div>
+            <p class="meta-location">Brampton, ON</p>
+            <ul>
+              <li>Lead SIT for new partners; ensured timely &amp; accurate 850/855/856/810/997 flows.</li>
+              <li>Monitored EDI via MS Dynamics AX &amp; middleware; drove automation and alerts.</li>
+              <li>Optimized partner compliance and documentation.</li>
+            </ul>
+            <div class="chips small-chips">
+              <span class="chip">EDI</span><span class="chip">MS Dynamics AX</span><span class="chip">SIT</span><span class="chip">Automation</span>
+            </div>
+          </div>
         </article>
-        <article class="card">
-          <h3>Operations Data Analyst — L&T Technology Services</h3>
-          <p class="meta">Nov 2021 – Aug 2023 · Vadodara, India</p>
-          <ul>
-            <li>Reduced downtime by 25% with APM predictive analytics.</li>
-            <li>Improved reliability via FMEA/RCA and data-driven process improvements.</li>
-            <li>Raised OEE by 15%; standardized procurement analytics.</li>
-          </ul>
+
+        <article class="timeline-item reveal" style="--delay: 0.1s">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="card timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Operations Data Analyst</h3>
+                <p class="company">L&amp;T Technology Services</p>
+              </div>
+              <span class="timeline-date">Nov 2021 &ndash; Aug 2023</span>
+            </div>
+            <p class="meta-location">Vadodara, India</p>
+            <ul>
+              <li>Reduced downtime by 25% with APM predictive analytics.</li>
+              <li>Improved reliability via FMEA/RCA and data-driven process improvements.</li>
+              <li>Raised OEE by 15%; standardized procurement analytics.</li>
+            </ul>
+            <div class="chips small-chips">
+              <span class="chip">APM</span><span class="chip">Power BI</span><span class="chip">FMEA/RCA</span><span class="chip">Predictive Analytics</span>
+            </div>
+          </div>
         </article>
-        <article class="card">
-          <h3>SAP MM Analyst — L&T Technology Services</h3>
-          <p class="meta">May 2020 – Nov 2021 · Vadodara, India</p>
-          <ul>
-            <li>Managed SAP MM processes across procurement, inventory, logistics.</li>
-            <li>Translated business requirements into scalable SAP MM solutions.</li>
-            <li>Analytics-driven cost reduction and performance improvements.</li>
-          </ul>
+
+        <article class="timeline-item reveal" style="--delay: 0.15s">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="card timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>SAP MM Analyst</h3>
+                <p class="company">L&amp;T Technology Services</p>
+              </div>
+              <span class="timeline-date">May 2020 &ndash; Nov 2021</span>
+            </div>
+            <p class="meta-location">Vadodara, India</p>
+            <ul>
+              <li>Managed SAP MM processes across procurement, inventory, and logistics.</li>
+              <li>Translated business requirements into scalable SAP MM solutions.</li>
+              <li>Analytics-driven cost reduction and performance improvements.</li>
+            </ul>
+            <div class="chips small-chips">
+              <span class="chip">SAP MM</span><span class="chip">Procurement</span><span class="chip">Analytics</span>
+            </div>
+          </div>
         </article>
-        <article class="card">
-          <h3>Data Administrator/Controller</h3>
-          <p class="meta">Aug 2019 – May 2020 · Vadodara, India</p>
-          <ul>
-            <li>Improved data retrieval efficiency by 30% with better backups & recovery.</li>
-            <li>Reduced discrepancies by 25% via validation and standardization.</li>
-            <li>Strengthened data protection and compliance controls.</li>
-          </ul>
+
+        <article class="timeline-item reveal" style="--delay: 0.2s">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="card timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Data Administrator / Controller</h3>
+                <p class="company">Vadodara, India</p>
+              </div>
+              <span class="timeline-date">Aug 2019 &ndash; May 2020</span>
+            </div>
+            <ul>
+              <li>Improved data retrieval efficiency by 30% with better backups &amp; recovery.</li>
+              <li>Reduced discrepancies by 25% via validation and standardization.</li>
+              <li>Strengthened data protection and compliance controls.</li>
+            </ul>
+            <div class="chips small-chips">
+              <span class="chip">Data Management</span><span class="chip">Compliance</span>
+            </div>
+          </div>
         </article>
-        <article class="card">
-          <h3>Maintenance Reliability Analyst</h3>
-          <p class="meta">Jan 2019 – Aug 2019 · Vadodara, India</p>
-          <ul>
-            <li>Increased equipment lifespan by 20% via RCM-based maintenance.</li>
-            <li>Lowered costs by 30% through continuous improvement.</li>
-            <li>Enhanced team competence via training and best practices.</li>
-          </ul>
+
+        <article class="timeline-item reveal" style="--delay: 0.25s">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="card timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Maintenance Reliability Analyst</h3>
+                <p class="company">Vadodara, India</p>
+              </div>
+              <span class="timeline-date">Jan 2019 &ndash; Aug 2019</span>
+            </div>
+            <ul>
+              <li>Increased equipment lifespan by 20% via RCM-based maintenance.</li>
+              <li>Lowered costs by 30% through continuous improvement.</li>
+              <li>Enhanced team competence via training and best practices.</li>
+            </ul>
+            <div class="chips small-chips">
+              <span class="chip">RCM</span><span class="chip">Reliability</span><span class="chip">Process Improvement</span>
+            </div>
+          </div>
         </article>
       </div>
     </section>
 
+    <!-- PROJECTS -->
     <section id="projects" class="section">
-      <p class="eyebrow">Projects</p>
-      <h2>Selected work</h2>
-      <div class="grid projects">
-        <article class="card project">
+      <div class="section-header reveal">
+        <p class="eyebrow">Projects</p>
+        <h2>Selected work</h2>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card reveal">
+          <div class="project-accent accent-blue" aria-hidden="true"></div>
           <div class="pill">Data Engineering</div>
-          <h3>IPL Data Analysis & Engineering</h3>
-          <p>End-to-end PySpark/Databricks pipeline turning ball-by-ball data into insights on batsmen performance and powerplay efficiency.</p>
-          <p class="meta">Skills: PySpark · Databricks · SQL · Data Engineering</p>
+          <h3>IPL Data Analysis &amp; Engineering</h3>
+          <p>End-to-end PySpark/Databricks pipeline turning ball-by-ball cricket data into insights on batsmen performance and powerplay efficiency.</p>
+          <div class="chips small-chips">
+            <span class="chip">PySpark</span><span class="chip">Databricks</span><span class="chip">SQL</span><span class="chip">Apache Spark</span>
+          </div>
         </article>
-        <article class="card project">
+        <article class="project-card reveal" style="--delay: 0.1s">
+          <div class="project-accent accent-purple" aria-hidden="true"></div>
           <div class="pill">IoT / Computer Vision</div>
-          <h3>Face Recognition-Based Motor Control System</h3>
+          <h3>Face Recognition Motor Control</h3>
           <p>Secure IoT automation replacing manual switches with biometric auth; OpenCV + ESP8266 + Flask web panel for real-time control.</p>
-          <p class="meta">Skills: Python · OpenCV · Flask · IoT · MySQL</p>
+          <div class="chips small-chips">
+            <span class="chip">Python</span><span class="chip">OpenCV</span><span class="chip">Flask</span><span class="chip">IoT</span><span class="chip">MySQL</span>
+          </div>
         </article>
-        <article class="card project">
-          <div class="pill">BI & ETL</div>
-          <h3>Real-Industry Sales Analytics (Power BI)</h3>
+        <article class="project-card reveal" style="--delay: 0.2s">
+          <div class="project-accent accent-teal" aria-hidden="true"></div>
+          <div class="pill">BI &amp; ETL</div>
+          <h3>Real-Industry Sales Analytics</h3>
           <p>ETL in MySQL to clean/normalize sales data; Power BI dashboard reduced manual reporting and surfaced growth opportunities.</p>
-          <p class="meta">Skills: Power BI · MySQL · ETL · Data Visualization</p>
+          <div class="chips small-chips">
+            <span class="chip">Power BI</span><span class="chip">MySQL</span><span class="chip">ETL</span><span class="chip">Data Visualization</span>
+          </div>
         </article>
       </div>
     </section>
 
+    <!-- EDUCATION -->
     <section id="education" class="section">
-      <p class="eyebrow">Education</p>
-      <h2>Academic background</h2>
-      <div class="grid education">
-        <div class="card"><h3>Sheridan College</h3><p>Postgraduate: Marketing/Marketing Management (Sep 2024 – Apr 2025)</p></div>
-        <div class="card"><h3>Sheridan College</h3><p>IOT & Machine Intelligence, IT (Sep 2023 – May 2024)</p></div>
-        <div class="card"><h3>Sigma Group of Institutes</h3><p>Bachelor’s: Electrical Engineering Technologies (Aug 2018 – Jul 2021)</p></div>
-        <div class="card"><h3>The M.S. University of Baroda</h3><p>Diploma: Electrical Engineering Technologies (2015 – 2018)</p></div>
+      <div class="section-header reveal">
+        <p class="eyebrow">Education</p>
+        <h2>Academic background</h2>
       </div>
-    </section>
-
-    <section id="skills" class="section two-col">
-      <div>
-        <p class="eyebrow">Skills & Tools</p>
-        <h2>Technical strengths</h2>
-        <div class="chip-list">
-          <span class="chip">EDI (850/855/856/810/997)</span><span class="chip">SAP MM</span><span class="chip">Power BI</span>
-          <span class="chip">Python</span><span class="chip">PySpark</span><span class="chip">Databricks</span>
-          <span class="chip">SQL</span><span class="chip">Apache Spark</span><span class="chip">Amazon S3</span>
-          <span class="chip">Flask</span><span class="chip">OpenCV</span>
+      <div class="education-grid">
+        <div class="edu-card reveal">
+          <div class="edu-icon" aria-hidden="true">&#128202;</div>
+          <div>
+            <h3>Sheridan College</h3>
+            <p class="edu-program">Postgraduate: Marketing Management</p>
+            <p class="edu-date">Sep 2024 &ndash; Apr 2025</p>
+          </div>
+        </div>
+        <div class="edu-card reveal" style="--delay: 0.1s">
+          <div class="edu-icon" aria-hidden="true">&#128161;</div>
+          <div>
+            <h3>Sheridan College</h3>
+            <p class="edu-program">IOT &amp; Machine Intelligence, IT</p>
+            <p class="edu-date">Sep 2023 &ndash; May 2024</p>
+          </div>
+        </div>
+        <div class="edu-card reveal" style="--delay: 0.15s">
+          <div class="edu-icon" aria-hidden="true">&#9889;</div>
+          <div>
+            <h3>Sigma Group of Institutes</h3>
+            <p class="edu-program">Bachelor's: Electrical Engineering</p>
+            <p class="edu-date">Aug 2018 &ndash; Jul 2021</p>
+          </div>
+        </div>
+        <div class="edu-card reveal" style="--delay: 0.2s">
+          <div class="edu-icon" aria-hidden="true">&#127891;</div>
+          <div>
+            <h3>The M.S. University of Baroda</h3>
+            <p class="edu-program">Diploma: Electrical Engineering</p>
+            <p class="edu-date">2015 &ndash; 2018</p>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <h3>Certifications & Honors</h3>
-        <ul class="tight">
-          <li>SAP MM</li><li>SAP ABAP</li><li>Python Programming</li>
-          <li>Google Analytics Certification</li><li>IoT Foundations: Fundamentals</li>
-          <li>Member of Student Board</li>
-        </ul>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="section-header reveal">
+        <p class="eyebrow">Skills &amp; Tools</p>
+        <h2>Technical strengths</h2>
+      </div>
+      <div class="skills-layout">
+        <div class="skills-categories reveal">
+          <div class="skill-category">
+            <h4>EDI &amp; Integration</h4>
+            <div class="chip-list">
+              <span class="chip">EDI (850/855/856/810/997)</span>
+              <span class="chip">SAP MM</span>
+              <span class="chip">MS Dynamics AX</span>
+              <span class="chip">Middleware</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h4>Data &amp; Analytics</h4>
+            <div class="chip-list">
+              <span class="chip">Power BI</span>
+              <span class="chip">Python</span>
+              <span class="chip">PySpark</span>
+              <span class="chip">Databricks</span>
+              <span class="chip">SQL</span>
+              <span class="chip">Apache Spark</span>
+              <span class="chip">Amazon S3</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h4>Development &amp; Tools</h4>
+            <div class="chip-list">
+              <span class="chip">Flask</span>
+              <span class="chip">OpenCV</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">ETL/ELT</span>
+            </div>
+          </div>
+        </div>
+        <div class="certifications-card card reveal reveal--right">
+          <h3>Certifications &amp; Honors</h3>
+          <ul class="cert-list">
+            <li>
+              <span class="cert-icon" aria-hidden="true">&#127885;</span>
+              <div><strong>SAP MM</strong><span class="cert-issuer">Certification</span></div>
+            </li>
+            <li>
+              <span class="cert-icon" aria-hidden="true">&#127885;</span>
+              <div><strong>SAP ABAP</strong><span class="cert-issuer">Certification</span></div>
+            </li>
+            <li>
+              <span class="cert-icon" aria-hidden="true">&#128013;</span>
+              <div><strong>Python Programming</strong><span class="cert-issuer">Certification</span></div>
+            </li>
+            <li>
+              <span class="cert-icon" aria-hidden="true">&#128202;</span>
+              <div><strong>Google Analytics</strong><span class="cert-issuer">Google Certification</span></div>
+            </li>
+            <li>
+              <span class="cert-icon" aria-hidden="true">&#127760;</span>
+              <div><strong>IoT Foundations</strong><span class="cert-issuer">Fundamentals</span></div>
+            </li>
+            <li>
+              <span class="cert-icon" aria-hidden="true">&#11088;</span>
+              <div><strong>Member of Student Board</strong><span class="cert-issuer">Leadership Honor</span></div>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="section contact">
-      <div>
-        <p class="eyebrow">Contact</p>
-        <h2>Let’s build resilient data & EDI systems together.</h2>
-        <p>Email: <a href="mailto:ashutoshbpurani99@gmail.com">ashutoshbpurani99@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/ashu-purani" target="_blank" rel="noreferrer">linkedin.com/in/ashu-purani</a></p>
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="contact-layout">
+        <div class="contact-info reveal">
+          <p class="eyebrow">Get in Touch</p>
+          <h2>Let's build resilient data &amp; EDI systems together.</h2>
+          <p>Whether you need EDI consulting, data engineering, or supply chain integration &mdash; I'd love to hear about your project.</p>
+          <div class="contact-items">
+            <a href="mailto:ashutoshbpurani99@gmail.com" class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <p class="contact-label">Email</p>
+                <p class="contact-value">ashutoshbpurani99@gmail.com</p>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/ashu-purani" target="_blank" rel="noreferrer" class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              <div>
+                <p class="contact-label">LinkedIn</p>
+                <p class="contact-value">linkedin.com/in/ashu-purani</p>
+              </div>
+            </a>
+            <div class="contact-item non-link">
+              <div class="contact-item-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <p class="contact-label">Location</p>
+                <p class="contact-value">Mississauga, Ontario, Canada</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form action="https://formspree.io/f/xaqlyqal" method="POST" class="contact-form card reveal reveal--right" id="contactForm" novalidate>
+          <input type="hidden" name="_subject" value="New inquiry from portfolio site">
+          <div class="form-row">
+            <label class="form-group">
+              <span>Full Name</span>
+              <input type="text" name="name" placeholder="Your name" required>
+            </label>
+            <label class="form-group">
+              <span>Email Address</span>
+              <input type="email" name="email" placeholder="your@email.com" required>
+            </label>
+          </div>
+          <label class="form-group">
+            <span>Message</span>
+            <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22,2 15,22 11,13 2,9"/></svg>
+            Send Message
+          </button>
+          <p class="small">Submits securely via Formspree to ashutoshbpurani99@gmail.com</p>
+          <div class="form-success" id="formSuccess" role="alert" aria-live="assertive">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
+            <p>Message sent! I'll get back to you soon.</p>
+          </div>
+        </form>
       </div>
-      <form action="https://formspree.io/f/xaqlyqal" method="POST" class="card form">
-        <input type="hidden" name="_subject" value="New inquiry from portfolio site">
-        <label>Name<input type="text" name="name" required></label>
-        <label>Email<input type="email" name="email" required></label>
-        <label>Message<textarea name="message" rows="4" required></textarea></label>
-        <button type="submit" class="btn btn-primary">Send Message</button>
-        <p class="small">Submits securely to ashutoshbpurani99@gmail.com via Formspree.</p>
-      </form>
     </section>
+
   </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> Ashu Purani · Built for recruiters, hiring managers, and clients.</p>
+    <div class="footer-content">
+      <p class="footer-brand">Ashu Purani</p>
+      <p class="footer-tagline">EDI Analyst &middot; Data Engineer &middot; Supply Chain Specialist</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="mailto:ashutoshbpurani99@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/ashu-purani" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="assets/resume.pdf" download>R&eacute;sum&eacute;</a>
+      </nav>
+      <p class="footer-copy">&copy; <span id="year"></span> Ashu Purani &middot; Built for recruiters, hiring managers &amp; clients.</p>
+    </div>
   </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="18,15 12,9 6,15"/></svg>
+  </button>
 
   <script src="script.js"></script>
 </body>
